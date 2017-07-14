@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--res file for designing UI of application-->
 
-<android.support.constraint.ConstraintLayout
+<!--For this app we'll be using a Linear Layout. Since
+everything will just stack top-to-bottom with no
+Relative positioning, make sure to set orientation to vertical-->
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.rodneytressler.guessinggamefinal.MainActivity"
     >
 
@@ -20,4 +24,4 @@
       app:layout_constraintTop_toTopOf="parent"
       />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
