@@ -83,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
         /** Now we'll pass our guess into our checkGuess method, to see if we won. We first have to convert our
          * string guess into an int so its value can be checked. We do this with Integer.parseInt()*/
         checkGuess(Integer.parseInt(inputText));
+
+        /** This will erase all of the text in our edittext box*/
+        inputField.setText("");
       }
     });
   }
