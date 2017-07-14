@@ -14,14 +14,13 @@ Relative positioning, make sure to set orientation to vertical-->
     tools:context="com.example.rodneytressler.guessinggamefinal.MainActivity"
     >
 
+  <!--This is where we'll put the textView instructions for
+  the application, also, remove constraints, since we're
+  not using a constraint layout anymore.-->
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Hello World!"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
+      android:text="Guess a Number 1-100"
       />
 
 </LinearLayout>
