@@ -47,7 +47,15 @@ Relative positioning, make sure to set orientation to vertical-->
 
   <!--Adds button to layout to show how we'll be adding buttons-->
 
+  <!--Adds decoration for the button, making it the width of the
+ screen, blue, with white text.-->
+
+  <!--margin makes the button smaller-->
+
   <Button
+      android:layout_margin="15dp"
+      android:textColor="@android:color/white"
+      android:background="@color/colorPrimary"
       android:layout_gravity="center"
       android:text="Submit"
       android:textSize="20sp"
