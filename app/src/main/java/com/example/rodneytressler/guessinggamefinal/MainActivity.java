@@ -6,12 +6,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import java.util.concurrent.ThreadLocalRandom;
 
 /** Java class for writing logic for app. */
 public class MainActivity extends AppCompatActivity {
 
   private Button submitButton;
   private EditText inputField;
+
+  /** This is a member variable for our winning number*/
+  private int winningNumber;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -27,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
     /** This method will listen for a button press on our submitButton*/
     submitButtonClicked();
+
+    /** This method will start the game and set up all of the views for the app, along with the winning number*/
+    startGame();
+  }
+
+  private void startGame() {
+    /** Here we generate a random winning number between the range of 1 and 100. We add 1 to the winning
+     * value to make sure it can reach 100. */
+
+    winningNumber = ThreadLocalRandom.current().nextInt(1, 100 + 1);
   }
 
   private void submitButtonClicked() {
