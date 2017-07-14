@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /** Java class for writing logic for app. */
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
     submitButton.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View view) {
 
+        /** Here we're declaring a variable equal to the value inside of our edittext*/
+        String inputText = inputField.getText().toString();
+
+        /** Now we're toasting that value onto the screen!*/
+        Toast.makeText(MainActivity.this, "Checking your guess of " + inputText, Toast.LENGTH_SHORT).show();
       }
     });
   }
