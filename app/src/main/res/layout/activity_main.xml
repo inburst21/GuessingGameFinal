@@ -38,7 +38,10 @@ Relative positioning, make sure to set orientation to vertical-->
 
   <!--inputType Makes the editText, when clicked reveal a grid numberpad.-->
 
+  <!--Now we've given an id to our edit text, so that we can bind it in code.-->
+
   <EditText
+      android:id="@+id/input_field"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
