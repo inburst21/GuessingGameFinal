@@ -79,7 +79,10 @@ Relative positioning, make sure to set orientation to vertical-->
   between gone and invisible is that an invisible button
   can still be clicked, it just can't be seen. gone makes
   it completely unavailable until stated otherwise-->
+
+  <!--Finally, we're giving an id to our restart button-->
   <Button
+      android:id="@+id/button_restart"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
