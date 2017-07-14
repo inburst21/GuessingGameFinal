@@ -63,4 +63,20 @@ Relative positioning, make sure to set orientation to vertical-->
       android:layout_height="wrap_content"
       />
 
+  <!--Makes the visibility of the button gone. The difference
+  between gone and invisible is that an invisible button
+  can still be clicked, it just can't be seen. gone makes
+  it completely unavailable until stated otherwise-->
+  <Button
+      android:visibility="gone"
+      android:background="@color/colorPrimary"
+      android:textColor="@android:color/white"
+      android:layout_margin="15dp"
+      android:textSize="20sp"
+      android:text="Restart"
+      android:layout_gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+
 </LinearLayout>
