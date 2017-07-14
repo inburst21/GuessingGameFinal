@@ -25,12 +25,16 @@ Relative positioning, make sure to set orientation to vertical-->
 
   margin_top will allow us to move the text down-->
 
+  <!--Now we've generated a string resource value of our instructions to be used when starting the game
+  and given the textview an id-->
+
   <TextView
+      android:id="@+id/instructions"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
       android:layout_marginTop="50dp"
-      android:text="Guess a Number 1-100"
+      android:text="@string/instructions"
       android:textSize="20sp"
       />
 

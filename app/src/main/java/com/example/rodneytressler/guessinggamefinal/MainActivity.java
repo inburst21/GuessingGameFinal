@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
   private Button submitButton;
   private EditText inputField;
+  private TextView instructions;
 
   /** This is a member variable for our winning number*/
   private int winningNumber;
@@ -29,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
     /** This binds our edit text member variable to our edit text UI element from our XML file*/
     inputField = (EditText) findViewById(R.id.input_field);
 
+    /** This binds our text view to our textview UI element from our XML file*/
+    instructions = (TextView) findViewById(R.id.instructions);
+
     /** This method will listen for a button press on our submitButton*/
     submitButtonClicked();
 
@@ -41,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
      * value to make sure it can reach 100. */
 
     winningNumber = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+
+    /** Here we're using our previously extracted String resource for instructions to set the text when starting
+     * a game to the instructions*/
+
+    instructions.setText(getResources().getString(R.string.instructions));
   }
 
   private void submitButtonClicked() {
