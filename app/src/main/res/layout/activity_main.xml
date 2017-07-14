@@ -18,12 +18,16 @@ Relative positioning, make sure to set orientation to vertical-->
   the application, also, remove constraints, since we're
   not using a constraint layout anymore.
 
-  With textSize we're setting how large we want the text to be-->
+  With textSize we're setting how large we want the text to be
+
+  gravity allows you to position the textview. center centers
+  it in the app window-->
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Guess a Number 1-100"
       android:textSize="20sp"
+      android:layout_gravity="center"
       />
 
 </LinearLayout>
