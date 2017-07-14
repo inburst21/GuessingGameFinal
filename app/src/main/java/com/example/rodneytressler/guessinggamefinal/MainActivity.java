@@ -66,7 +66,23 @@ public class MainActivity extends AppCompatActivity {
 
         /** Now we're toasting that value onto the screen!*/
         Toast.makeText(MainActivity.this, "Checking your guess of " + inputText, Toast.LENGTH_SHORT).show();
+
+        /** Now we'll pass our guess into our checkGuess method, to see if we won. We first have to convert our
+         * string guess into an int so its value can be checked. We do this with Integer.parseInt()*/
+        checkGuess(Integer.parseInt(inputText));
       }
     });
+  }
+
+  public void checkGuess(int guess) {
+    if(guess > winningNumber) {
+      instructions.setText("Lower");
+    } else if(guess < winningNumber) {
+      instructions.setText("Higher");
+    } else if (guess == winningNumber) {
+      instructions.setText("You Win! The correct number was " + winningNumber);
+    } else {
+      Toast.makeText(this, "Invalid Entry, please try again!", Toast.LENGTH_SHORT).show();
+    }
   }
 }
