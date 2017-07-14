@@ -16,11 +16,14 @@ Relative positioning, make sure to set orientation to vertical-->
 
   <!--This is where we'll put the textView instructions for
   the application, also, remove constraints, since we're
-  not using a constraint layout anymore.-->
+  not using a constraint layout anymore.
+
+  With textSize we're setting how large we want the text to be-->
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Guess a Number 1-100"
+      android:textSize="20sp"
       />
 
 </LinearLayout>
