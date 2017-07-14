@@ -21,8 +21,12 @@ Relative positioning, make sure to set orientation to vertical-->
   With textSize we're setting how large we want the text to be
 
   gravity allows you to position the textview. center centers
-  it in the app window-->
+  it in the app window
+
+  margin_top will allow us to move the text down-->
+
   <TextView
+      android:layout_marginTop="50dp"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Guess a Number 1-100"
