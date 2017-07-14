@@ -44,4 +44,15 @@ Relative positioning, make sure to set orientation to vertical-->
       android:layout_height="wrap_content"
       />
 
+
+  <!--Adds button to layout to show how we'll be adding buttons-->
+
+  <Button
+      android:layout_gravity="center"
+      android:text="Submit"
+      android:textSize="20sp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+
 </LinearLayout>
