@@ -34,4 +34,14 @@ Relative positioning, make sure to set orientation to vertical-->
       android:layout_gravity="center"
       />
 
+  <!--Adds the EditText, which will hold the user's guess-->
+
+  <EditText
+      android:layout_marginTop="25dp"
+      android:layout_gravity="center"
+      android:textSize="50sp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+
 </LinearLayout>
