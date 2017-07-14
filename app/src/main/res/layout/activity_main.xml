@@ -36,7 +36,10 @@ Relative positioning, make sure to set orientation to vertical-->
 
   <!--Adds the EditText, which will hold the user's guess-->
 
+  <!--inputType Makes the editText, when clicked reveal a grid numberpad.-->
+
   <EditText
+      android:inputType="number"
       android:layout_marginTop="25dp"
       android:layout_gravity="center"
       android:textSize="50sp"
