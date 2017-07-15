@@ -17,13 +17,28 @@ rather than just stacking them vertically-->
       android:layout_height="wrap_content"
       />
 
-  <!--Here we're using some relative layout commands. center in parent will center it right
-  in the page. Also, we don't need the button to be invisible anymore, since this page is a winning page.-->
+  <!--This will place an image view in the center of the page,
+  this will force it both below the textview, and above the
+  restart button, which is forced on the bottom of the page.
+  if the image is too large to fit between them, it'll be
+  automatically shrunk to the largest possible size that will
+  show all of the image.-->
+  <ImageView
+      android:src="@drawable/thumb"
+      android:layout_centerInParent="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+
+  <!--Here we're using some relative layout commands. Align bottom
+  will put it on the bottom of the page.
+  Also, we don't need the button to be invisible anymore,
+  since this page is a winning page.-->
   <Button
       android:id="@+id/button_restart"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_centerInParent="true"
+      android:layout_alignParentBottom="true"
       android:layout_margin="15dp"
       android:background="@color/colorPrimary"
       android:text="Restart"
