@@ -9,7 +9,9 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-    <activity android:name=".MainActivity">
+    <!--we're locking screen orientation to portraint so it doesn't look bad when turned sideways.-->
+    <activity android:name=".MainActivity"
+        android:screenOrientation="portrait">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
@@ -17,7 +19,9 @@
       </intent-filter>
     </activity>
     <!--Here we're naming our new, Winner Activity.-->
-    <activity android:name=".WinnerActivity">
+    <!--We set it to portrait so the app stays ok when it's turned sideways-->
+    <activity android:name=".WinnerActivity"
+        android:screenOrientation="portrait">
 
     </activity>
   </application>
