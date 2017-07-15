@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This will be our winner activity-->
+<!--We're using a RelativeLayout for this activity. It places UI elements relative to one-another,
+rather than just stacking them vertically-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!--This is also using the center abilities of a relativelayout.-->
+  <TextView
+      android:text="You Won!"
+      android:layout_marginTop="40dp"
+      android:layout_centerHorizontal="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+
+  <!--Here we're using some relative layout commands. center in parent will center it right
+  in the page. Also, we don't need the button to be invisible anymore, since this page is a winning page.-->
+  <Button
+      android:id="@+id/button_restart"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:layout_margin="15dp"
+      android:background="@color/colorPrimary"
+      android:text="Restart"
+      android:textColor="@android:color/white"
+      android:textSize="20sp"
+      />
+
+</RelativeLayout>

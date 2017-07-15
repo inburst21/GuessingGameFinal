@@ -81,17 +81,6 @@ Relative positioning, make sure to set orientation to vertical-->
   it completely unavailable until stated otherwise-->
 
   <!--Finally, we're giving an id to our restart button-->
-  <Button
-      android:id="@+id/button_restart"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:layout_margin="15dp"
-      android:background="@color/colorPrimary"
-      android:text="Restart"
-      android:textColor="@android:color/white"
-      android:textSize="20sp"
-      android:visibility="gone"
-      />
+
 
 </LinearLayout>

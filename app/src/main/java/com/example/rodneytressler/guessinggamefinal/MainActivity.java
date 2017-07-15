@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
   private Button submitButton;
   private EditText inputField;
   private TextView instructions;
-  private Button restartButton;
+
 
   /** This is a member variable for our winning number*/
   private int winningNumber;
@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
     /** This binds our text view to our textview UI element from our XML file*/
     instructions = (TextView) findViewById(R.id.instructions);
 
-    /** This binds our restart button member variable with our UI element restart button from our XML file*/
-    restartButton = (Button) findViewById(R.id.button_restart);
 
     /** This method will listen for a button press on our submitButton*/
     submitButtonClicked();
@@ -44,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
     /** This method will start the game and set up all of the views for the app, along with the winning number*/
     startGame();
 
-    /** This method will listen for a button press on our restartButton*/
-    restartButtonClicked();
   }
 
   private void startGame() {
@@ -62,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
     /** This will set the input text value to blank, in case the player is restarting the game*/
     inputField.setText("");
 
-    /** This will set the restart button back to gone in the event that it was just clicked*/
-    restartButton.setVisibility(View.GONE);
   }
 
   private void submitButtonClicked() {
@@ -101,23 +95,11 @@ public class MainActivity extends AppCompatActivity {
     } else if (guess == winningNumber) {
       instructions.setText("You Win! The correct number was " + winningNumber);
 
-      /** This sets the visibility of the restart button to visible after winning*/
-      restartButton.setVisibility(View.VISIBLE);
 
     } else {
       Toast.makeText(this, "Invalid Entry, please try again!", Toast.LENGTH_SHORT).show();
     }
   }
 
-  public void restartButtonClicked() {
-    /** Now we'll set an onClickListener for our restart button and have it call our startGame() method
-     * to start the game over and to set the visibility of our restart button back to gone.*/
 
-    restartButton.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View view) {
-        Toast.makeText(MainActivity.this, "Restarting Game", Toast.LENGTH_SHORT).show();
-        startGame();
-      }
-    });
-  }
 }
