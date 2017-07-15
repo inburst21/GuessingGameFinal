@@ -95,13 +95,14 @@ public class MainActivity extends AppCompatActivity {
       instructions.setText("Higher");
     } else if (guess == winningNumber) {
       /** Here we're creating our intent. this forms a relationship, a connection between these
-       * two activities.*/
+       * two activities. But first we're calling startGame() to reset all values, in case we want
+       * to play again*/
+      startGame();
       Intent intent = new Intent(this, WinnerActivity.class);
       startActivity(intent);
     } else {
       Toast.makeText(this, "Invalid Entry, please try again!", Toast.LENGTH_SHORT).show();
     }
   }
-
 
 }

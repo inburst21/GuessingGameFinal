@@ -4,6 +4,7 @@ package com.example.rodneytressler.guessinggamefinal;
  * Created by rodneytressler on 7/14/17.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -35,6 +36,7 @@ public class WinnerActivity extends AppCompatActivity{
     restartButton.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View view) {
         Toast.makeText(WinnerActivity.this, "Restarting Game", Toast.LENGTH_SHORT).show();
+        finish();
       }
     });
   }
