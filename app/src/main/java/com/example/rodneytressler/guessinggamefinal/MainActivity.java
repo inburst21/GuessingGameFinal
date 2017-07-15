@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     /** Here we generate a random winning number between the range of 1 and 100. We add 1 to the winning
      * value to make sure it can reach 100. */
 
-    winningNumber = ThreadLocalRandom.current().nextInt(1, 100 + 1);
+    winningNumber = 1 + (int)(Math.random() * ((100 - 1) + 1));
 
     /** Here we're using our previously extracted String resource for instructions to set the text when starting
      * a game to the instructions*/
