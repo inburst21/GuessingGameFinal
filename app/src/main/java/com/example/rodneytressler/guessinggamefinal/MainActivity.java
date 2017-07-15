@@ -3,6 +3,7 @@ package com.example.rodneytressler.guessinggamefinal;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +13,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /** Java class for writing logic for app. */
 public class MainActivity extends AppCompatActivity {
+
+  public static final String WINNING_NUMBER = "WINNING_NUMBER";
 
   private Button submitButton;
   private EditText inputField;
@@ -95,11 +98,15 @@ public class MainActivity extends AppCompatActivity {
       instructions.setText("Higher");
     } else if (guess == winningNumber) {
       /** Here we're creating our intent. this forms a relationship, a connection between these
-       * two activities. But first we're calling startGame() to reset all values, in case we want
-       * to play again*/
-      startGame();
+       * two activities. We're calling startGame() to reset all values, in case we want
+       * to play again, as the activity is still running when it's not visible*/
       Intent intent = new Intent(this, WinnerActivity.class);
+
+      /** This is where we'll pass the winning number into the winning activity, so it can set the textview equal to
+       * the winning value*/
+      intent.putExtra(WINNING_NUMBER, winningNumber);
       startActivity(intent);
+      startGame();
     } else {
       Toast.makeText(this, "Invalid Entry, please try again!", Toast.LENGTH_SHORT).show();
     }

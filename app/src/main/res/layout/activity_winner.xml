@@ -8,6 +8,7 @@ rather than just stacking them vertically-->
 
   <!--This is also using the center abilities of a relativelayout.-->
   <TextView
+      android:id="@+id/winning_message"
       android:textSize="20sp"
       android:text="You Won!"
       android:layout_marginTop="40dp"
