@@ -16,6 +16,10 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <!--Here we're naming our new, Winner Activity.-->
+    <activity android:name=".WinnerActivity">
+
+    </activity>
   </application>
 
 </manifest>

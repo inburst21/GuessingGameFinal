@@ -1,5 +1,6 @@
 package com.example.rodneytressler.guessinggamefinal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -93,9 +94,10 @@ public class MainActivity extends AppCompatActivity {
     } else if(guess < winningNumber) {
       instructions.setText("Higher");
     } else if (guess == winningNumber) {
-      instructions.setText("You Win! The correct number was " + winningNumber);
-
-
+      /** Here we're creating our intent. this forms a relationship, a connection between these
+       * two activities.*/
+      Intent intent = new Intent(this, WinnerActivity.class);
+      startActivity(intent);
     } else {
       Toast.makeText(this, "Invalid Entry, please try again!", Toast.LENGTH_SHORT).show();
     }
