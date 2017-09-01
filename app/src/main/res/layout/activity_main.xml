@@ -26,9 +26,11 @@ Relative positioning, make sure to set orientation to vertical-->
   margin_top will allow us to move the text down-->
 
   <!--Now we've generated a string resource value of our instructions to be used when starting the game
-  and given the textview an id-->
+  and given the textview an id. We'll also give it a centered gravity
+  so the text stays centered, even on multiple lines.-->
 
   <TextView
+      android:gravity="center"
       android:id="@+id/instructions"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
