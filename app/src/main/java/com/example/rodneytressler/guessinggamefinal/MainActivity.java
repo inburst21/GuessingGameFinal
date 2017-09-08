@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     /** This checks our guess and sets the instructional text view accordingly. It decrements the amount of turns the user has left and
      * changes the text and button text when they run out of turns, which, as we know, changes the functionality of the button.*/
 
-    if (turnsLeft != 1) {
+    if (turnsLeft != 1 && guess != winningNumber) {
       turnsLeft--;
       if (guess > winningNumber) {
         instructions.setText("Lower");
@@ -107,21 +107,21 @@ public class MainActivity extends AppCompatActivity {
       } else if (guess < winningNumber) {
         instructions.setText("Higher");
         Toast.makeText(this, turnsLeft + " turn(s) left!", Toast.LENGTH_SHORT).show();
-      } else if (guess == winningNumber) {
-        /** Here we're creating our intent. this forms a relationship, a connection between these
-         * two activities. We're calling startGame() to reset all values, in case we want
-         * to play again, as the activity is still running when it's not visible*/
-        Intent intent = new Intent(this, WinnerActivity.class);
-
-        /** This is where we'll pass the winning number into the winning activity, so it can set the textview equal to
-         * the winning value*/
-        intent.putExtra(WINNING_NUMBER, winningNumber);
-        startActivity(intent);
-        startGame();
       } else {
         Toast.makeText(this, "Invalid Entry, please try again!", Toast.LENGTH_SHORT).show();
       }
-    } else {
+    } else if (guess == winningNumber) {
+      /** Here we're creating our intent. this forms a relationship, a connection between these
+       * two activities. We're calling startGame() to reset all values, in case we want
+       * to play again, as the activity is still running when it's not visible*/
+      Intent intent = new Intent(this, WinnerActivity.class);
+
+      /** This is where we'll pass the winning number into the winning activity, so it can set the textview equal to
+       * the winning value*/
+      intent.putExtra(WINNING_NUMBER, winningNumber);
+      startActivity(intent);
+      startGame();
+    }else {
       instructions.setText("Game Over! The winning number was " + winningNumber + ". Please try again.");
       submitButton.setText("Restart");
     }
