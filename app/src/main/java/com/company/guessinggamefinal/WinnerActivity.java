@@ -1,4 +1,4 @@
-package com.example.rodneytressler.guessinggamefinal;
+package com.company.guessinggamefinal;
 
 /**
  * Created by rodneytressler on 7/14/17.
@@ -7,14 +7,16 @@ package com.example.rodneytressler.guessinggamefinal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.rodneytressler.guessinggamefinal.R;
+
+
 /** This will be our winner activity Java file, we have to extend AppCompatActivity*/
-public class WinnerActivity extends AppCompatActivity{
+public class WinnerActivity extends AppCompatActivity {
   private Button restartButton;
   private TextView winningMessage;
 

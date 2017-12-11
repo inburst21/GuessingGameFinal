@@ -11,7 +11,6 @@ Relative positioning, make sure to set orientation to vertical-->
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.rodneytressler.guessinggamefinal.MainActivity"
     >
 
   <!--This is where we'll put the textView instructions for

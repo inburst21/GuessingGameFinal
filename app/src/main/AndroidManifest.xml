@@ -24,6 +24,7 @@
         android:screenOrientation="portrait">
 
     </activity>
+    <activity android:name="com.company.guessinggamefinal.MainActivity" />
   </application>
 
 </manifest>
